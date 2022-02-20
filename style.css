@@ -1,0 +1,127 @@
+body {
+    min-height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+}
+
+form {
+    width: 50%;
+    min-width: 380px;
+    max-width: 600px;
+    background: white;
+    display: grid;
+    /*grid-template-rows: repeat(4, 104px);*/
+    padding: 60px 45px 30px;
+    border-radius: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+form::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 150px;
+    background: linear-gradient(65deg, darkblue, whitesmoke);
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+}
+/*div {*/
+/*    transition: 0.2s;*/
+/*}*/
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin: 7px 0 7px;
+    border: 1px solid transparent;
+    background: rgba(31, 31, 142, 0.15);
+    height: 36px;
+    width: 100%;
+    /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);*/
+    border-radius: 9px;
+    font-size: 1.1rem;
+    padding-left: 10px;
+    transition: 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border: 1px solid chartreuse;
+}
+
+input[type="submit"] {
+    border: none;
+    background: linear-gradient(65deg, #3939b3, darkslateblue);
+    width: 50%;
+    margin: 12px auto 0;
+    padding: 10px;
+    border-radius: 150px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    /*filter: brightness(100%);*/
+    transform: translateY(3px);
+}
+
+span {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 0.8rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    color: darkred;
+}
+
+p {
+    background: darkred;
+    width: 33%;
+    height: 6px;
+    margin: -2px 0 2px;
+    border-radius: 50px;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.error input {
+    color: darkred;
+    border: 1px solid rgba(255, 0, 0, 0.55);
+}
+
+.error span {
+    visibility: visible;
+    opacity: 1;
+    color: darkred;
+}
+
+.progressBarRed {
+    background: darkred;
+    width: 33%;
+    visibility: visible;
+}
+
+.progressBarBlue {
+    background: darkblue;
+    width: 66%;
+    visibility: visible;
+}
+
+.progressBarGreen {
+    background: darkgreen;
+    width: 100%;
+    visibility: visible;
+}
